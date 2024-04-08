@@ -32,16 +32,6 @@ public class TicTacToe {
             game.makeMove();
             game.getBoard().printBoard();
         }
-
-        log.debug("Debug message");
-        log.info("Info message");
-        log.warn("Warning message");
-        log.error("Error message");
-        log.fatal("Fatal message");
-        //Create TicTacToe.Game//
-        //Play TicTacToe.Game//
-        //Check if game is finished or draw//
-        //Give Option to restart//
         return;
     }
 
@@ -54,21 +44,11 @@ public class TicTacToe {
         Scanner scanner=new Scanner(System.in);
         Level level=Level.valueOf(scanner.nextLine());
         Symbol symbol=getBotSymbol(human.getSymbol());
-        log.debug("Debug message");
-        log.info("Info message");
-        log.warn("Warning message");
-        log.error("Error message");
-        log.fatal("Fatal message");
         return new BotPlayer(level, symbol);
     }
 
     private static Symbol getBotSymbol(Symbol humanSymbol) {
         if(humanSymbol == Symbol.O){return Symbol.X;}
-        log.debug("Debug message");
-        log.info("Info message");
-        log.warn("Warning message");
-        log.error("Error message");
-        log.fatal("Fatal message");
         return Symbol.O;
     }
 
@@ -88,11 +68,6 @@ public class TicTacToe {
             return null;
         }
         User user = new User(name, email, null);
-        log.debug("Debug message");
-        log.info("Info message");
-        log.warn("Warning message");
-        log.error("Error message");
-        log.fatal("Fatal message");
         return new HumanPlayer(user, symbol);
 
     }
